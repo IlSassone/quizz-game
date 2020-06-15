@@ -1,0 +1,19 @@
+{
+  "name": "quizgame",
+  "version": "1.0.0",
+  "description": "a quiz game sossone",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "12.18.0"
+  },
+  "author": "Mattia",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
