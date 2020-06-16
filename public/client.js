@@ -18,7 +18,11 @@ $(document).ready(()=> {
 
     socket.on("sendCategories", (res) => {
         loader.hide();
+        $(".start").remove();
+        let categoryManager = new ChooseCategory(res);
         console.log(res);
+
     });
+    
 });
 

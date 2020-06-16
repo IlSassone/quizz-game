@@ -19,11 +19,12 @@ let io = socket(server);
 io.on("connection", (socket)=>{
     console.log("someone connected");
 
-    socket.on("gameStart", async ()=>{
+    socket.on("gameStart", ()=>{
         quiz.randomCategory().then((body)=>{
             console.log(body);
             socket.emit("sendCategories", body);
-        })
+        });
+        
         
         console.log("ao dall'altra parte hanno premuto er bottone");
         
