@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const http = require("http");
+const http = require("https");
 const socket = require("socket.io");
 
 let app = express();
@@ -15,10 +15,13 @@ let io = socket(server)
 io.on("connection", (socket)=>{
     console.log("someone connected");
 
-    socket.on("disconnect", (socket) => {
-    console.log("someone disconnected");
-    });
 
+
+
+    socket.on("disconnect", (socket) => {
+        console.log("someone disconnected");
+    });
+    
 });
 
 
