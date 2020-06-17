@@ -21,8 +21,20 @@ $(document).ready(()=> {
         $(".start").remove();
         let categoryManager = new ChooseCategory(res);
         console.log(res);
+        categoryManager.show();
+        
+        $(".categoryButton").on("click", (a) => {
+            let b = a.currentTarget.attributes[0].value;
+            socket.emit("choosenCategory", categoryManager.all[categoryManager.choosen[b[1]]-9]);
+            
+        });
+
 
     });
+
+    
+
+
     
 });
 
