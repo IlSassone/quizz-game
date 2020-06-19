@@ -48,6 +48,12 @@ $(document).ready(()=> {
             $(`#${a.currentTarget.id}`).css({
                 "border": "2px solid yellow"
             });
+            socket.emit("answer", answerManager.answers[b[1]]);
+
+            setTimeout(()=>{
+                answerManager.hide();
+                loader.show();
+            }, 500);
             
             //socket.emit("choosenCategory", categoryManager.all[categoryManager.choosen[b[1]] - 9]);
             //answerManager.hide();

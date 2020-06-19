@@ -44,6 +44,13 @@ io.on("connection", (socket)=>{
         });
     });
 
+    socket.on("answer", a =>{
+        console.log(a);
+        if(correct_answer == a) console.log("giusto");
+        else console.log("sbagliato");
+        
+        
+    });
 
 
     socket.on("disconnect", (socket) => {
