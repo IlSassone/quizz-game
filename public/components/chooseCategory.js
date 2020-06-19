@@ -52,6 +52,16 @@ class ChooseCategory {
             this.isThere = !this.isThere;
         }
     }
+    hide(){
+        if(this.isThere){
+            $(".chooseCategory").fadeOut();
+            setTimeout(()=>{
+                $(".chooseCategory").remove()
+            }, 500);
+            
+            this.isThere = !this.isThere;
+        }
+    }
     
 
 

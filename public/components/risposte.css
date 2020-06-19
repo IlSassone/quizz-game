@@ -1,0 +1,27 @@
+.risp {
+    position: relative;
+    height: 20vh;
+    background-color: #212121;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.testoRisp {
+
+    position: relative;
+    width: 390px;
+    height: 156px;
+    
+    display: inline-flex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}

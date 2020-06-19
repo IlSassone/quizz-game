@@ -13,7 +13,7 @@ let server = http.createServer(app);
 app.use(express.static("./public"));
 
 const quiz = new Quiz();
-
+let correct_answer = null;
 
 let io = socket(server);
 io.on("connection", (socket)=>{
@@ -32,7 +32,16 @@ io.on("connection", (socket)=>{
 
     socket.on("choosenCategory", (res)=>{
         console.log("ao er pirla ha scelto "+res.id);
-        
+        quiz.getQuestion(1, res.id, "medium", "multiple").then(body =>{
+            
+            console.log(body);
+            console.log(body.results[0].incorrect_answers);
+            let x = quiz.formatQuestion(body);
+            console.log(x);
+            correct_answer = body.results[0].correct_answer;
+            socket.emit("sendQuestions", x);
+            
+        });
     });
 
 
